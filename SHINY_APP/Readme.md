@@ -1,7 +1,7 @@
-This repository provides tools for generating ProForma-annotated output from Proteome Discoverer phospho data. The project offers two different ways to run the same analysis pipeline: a Shiny-based user interface and a command-line interface.
-All computational logic is implemented in a single shared file called core_calculation.R. Both the Shiny application and the command-line script source this file and call the same core function.
+# An R installation is required!
 
-# Please install R!
+This repository provides tools for generating ProForma-annotated output from Proteome Discoverer phospho data. The project offers two different ways to run the same analysis pipeline: an Shiny-based user interface and an command-line interface.
+All computational logic is implemented in a single shared file called core_calculation.R. Both the Shiny application and the command-line script source this file and call the same core function.
 
 # Shiny App
 To run the Shiny version, you need to open RStudio. Please install if you haven't.
@@ -19,13 +19,13 @@ install.packages(c(
   "jsonlite"
 ))
 
-You can either start the application by using the run button in RStudio or you navigate in the terminal to the directory of the files and then use the following command:
+You can either start the application by using the run button in RStudio or navigating in the terminal to the directory of the files and then use the following command:
 
 Run app:
 shiny::runApp("RShiny_ui.R")
 
 Once the app is running, users can upload a Proteome Discoverer Excel output file (.xlsx) using the file upload field in the sidebar.
-The UNIPROT API is then called and maps you iput data.
+The UNIPROT API is then called and maps your iput data.
 
 
 
