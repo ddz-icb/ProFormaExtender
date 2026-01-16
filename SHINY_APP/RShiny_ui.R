@@ -128,10 +128,10 @@ server <- function(input, output, session) {
     
     withProgress(message = "Starting calculation:", value = 0, {
       
-      incProgress(0.1, detail = "Reading Excel...")
+      incProgress(0.1, detail = "Uploading and parsing input file.")
       
       # ---- Zentrale Berechnung ----
-      incProgress(0.3, detail = "Running ProForma pipeline...")
+      incProgress(0.3, detail = "Submitting data to UNIPROT API...")
       df <- run_proforma_pipeline(input$excel$datapath)
       
       incProgress(1, detail = "Finished")
