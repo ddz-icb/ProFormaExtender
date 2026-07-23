@@ -9,15 +9,15 @@ The files RShiny_ui.R and core_calculation.R must be located in the same directo
 
 
 Needed packages:
-install.packages(c(
-  "shiny",
-  "shinyjs",
-  "shinyBS",
-  "readxl",
-  "stringr",
-  "httr",
-  "jsonlite"
-))
+  install.packages(c(
+    "shiny",
+    "shinyjs",
+    "shinyBS",
+    "readxl",
+    "stringr",
+    "httr",
+    "jsonlite"
+  ))
 
 # File Requirements:
 Ensure the following files are located in the same working directory:
