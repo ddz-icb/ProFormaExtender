@@ -1,6 +1,6 @@
 # An R installation is required!
 
-This repository provides tools for generating ProForma-annotated output from Proteome Discoverer phospho data. The project offers two different ways to run the same analysis pipeline: an Shiny-based user interface and an command-line interface.
+This repository provides tools for generating ProForma-annotated output from phosphoproteomics data. It supports input files directly from Proteome Discoverer (PD) as well as MaxQuant (MQ). The project offers two different ways to run the same analysis pipeline: an Shiny-based user interface and an command-line interface.
 All computational logic is implemented in a single shared file called core_calculation.R. Both the Shiny application and the command-line script source this file and call the same core function.
 
 # Shiny App
@@ -19,13 +19,30 @@ install.packages(c(
   "jsonlite"
 ))
 
+# File Requirements:
+Ensure the following files are located in the same working directory:
+RShiny_ui_v2.R   
+core_calculation.R   
+mq_to_pd_converter.py 
+
 You can either start the application by using the run button in RStudio or navigating in the terminal to the directory of the files and then use the following command:
 
-Run app:
-shiny::runApp("RShiny_ui.R")
+# Run app:
+shiny::runApp("RShiny_ui_v2.R")
 
-Once the app is running, users can upload a Proteome Discoverer Excel output file (.xlsx) using the file upload field in the sidebar.
-The UNIPROT API is then called and maps your iput data.
+Once the app is startet, the workflow is as follows: 
+
+# 1. Select Input Type:
+     Proteome Discoverer: Directly upload a standard PD Excel export (.xlsx)
+     MaxQuant: Upload your MaxQuant output files:  modificationSpecificPeptides.txt (Required), Phospho (STY) Sites.txt (Required), peptides.txt (Optional, provides exact genomic           coordinates)
+   Adjust filter options (e.g., remove/keep reverse hits or contaminants) and click Convert MQ → Excel
+# 2. Run ProForma Pipeline:
+     Click Start Calculation
+     The pipeline will parse the data and query the UniProt REST API to generate ProForma annotations and phosphosite mapping
+# 3. Download Results:
+     Preview the result table in the app and download the final annotated dataset as an Excel file (.xlsx)
+
+
 
 
 
