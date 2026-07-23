@@ -46,21 +46,5 @@ Once the app is startet, the workflow is as follows:
 
 
 
-# Commandline
-To use the CLI, the files proforma_cli.R and core_calculation.R must be present in the same working directory.
-Please install following packages If they are not installed yet.
-
-Needed packages:
-install.packages(c("optparse", "readxl", "stringr", "httr", "jsonlite"))
-
-The script is executed from a terminal or command prompt using Rscript. The command must be run from the directory containing the scripts or the script paths must be specified explicitly. The minimum required argument is an input Excel file, which must again be a Proteome Discoverer output file in .xlsx format. An optional output filename can be provided. Otherwise, the script automatically generates a date-based filename.
-
-
-Please navigate to your directory including the files before running the following command:
-
-Run commandline:
-Rscript proforma_cli.R --input input.xlsx
-
-OR
 
 Rscript proforma_cli.R --input input.xlsx --output result.tsv
