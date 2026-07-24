@@ -38,18 +38,18 @@ Once the app is startet, the workflow is as follows:
 - Proteome Discoverer: Directly upload a standard PD Excel export (.xlsx)
 <img width="484" height="813" alt="Bildschirmfoto 2026-07-24 um 11 37 42" src="https://github.com/user-attachments/assets/da07d97b-377c-40e9-8852-cea7545d4235" />
 
-MaxQuant: Upload your MaxQuant output files:  modificationSpecificPeptides.txt, Phospho (STY) Sites.txt, peptides.txt and click Convert MQ → Excel
+- MaxQuant: Upload your MaxQuant output files:  modificationSpecificPeptides.txt, Phospho (STY) Sites.txt, peptides.txt
+- click Convert MQ → Excel
 <img width="415" height="763" alt="Bildschirmfoto 2026-07-24 um 11 44 22" src="https://github.com/user-attachments/assets/341abb11-f30c-4ab0-b61c-ac00190f79ad" />
 
 # 2. Run ProForma Pipeline:
-Click Start Calculation
-The pipeline will parse the data and query the UniProt REST API to generate ProForma annotations and phosphosite mapping
+- Click Start Calculation
+- The pipeline will parse the data and query the UniProt REST API to generate ProForma annotations and phosphosite mapping
 # 3. Download Results:
-Preview the result table in the app and download the final annotated dataset as an Excel file (.xlsx)
+- Preview the result table in the app and download the final annotated dataset as an Excel file (.xlsx)
 
 
 
 
 
 
-Rscript proforma_cli.R --input input.xlsx --output result.tsv
