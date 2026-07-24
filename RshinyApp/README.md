@@ -1,7 +1,8 @@
 # An R installation is required!
 
-This repository provides tools for generating ProForma-annotated output from phosphoproteomics data. It supports input files directly from Proteome Discoverer (PD) as well as MaxQuant (MQ). The project offers two different ways to run the same analysis pipeline: an Shiny-based user interface and an command-line interface.
-All computational logic is implemented in a single shared file called core_calculation.R. Both the Shiny application and the command-line script source this file and call the same core function.
+This repository provides tools for generating ProForma-annotated output from phosphoproteomics data. It supports input files directly from Proteome Discoverer (PD) as well as MaxQuant (MQ). 
+All computational logic is implemented in a single shared file called core_calculation.R. Both the PD and the MQ paths
+source this file and call the same core function.
 
 # Shiny App
 To run the Shiny version, you need to open RStudio. Please install if you haven't.
@@ -32,10 +33,11 @@ shiny::runApp("RShiny_ui_v2.R")
 
 Once the app is startet, the workflow is as follows: 
 
+
 # 1. Select Input Type:
-     Proteome Discoverer: Directly upload a standard PD Excel export (.xlsx)
-     MaxQuant: Upload your MaxQuant output files:  modificationSpecificPeptides.txt (Required), Phospho (STY) Sites.txt (Required), peptides.txt (Optional, provides exact genomic           coordinates)
-   Adjust filter options (e.g., remove/keep reverse hits or contaminants) and click Convert MQ → Excel
+- Proteome Discoverer: Directly upload a standard PD Excel export (.xlsx)
+<img width="484" height="813" alt="Bildschirmfoto 2026-07-24 um 11 37 42" src="https://github.com/user-attachments/assets/da07d97b-377c-40e9-8852-cea7545d4235" />
+MaxQuant: Upload your MaxQuant output files:  modificationSpecificPeptides.txt, Phospho (STY) Sites.txt, peptides.txt and click Convert MQ → Excel
 # 2. Run ProForma Pipeline:
      Click Start Calculation
      The pipeline will parse the data and query the UniProt REST API to generate ProForma annotations and phosphosite mapping
