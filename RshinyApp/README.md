@@ -23,9 +23,9 @@ Needed packages:
 
 # File Requirements:
 Ensure the following files are located in the same working directory:
-RShiny_ui_v2.R   
-core_calculation.R   
-mq_to_pd_converter.py 
+- RShiny_ui_v2.R   
+- core_calculation.R   
+- mq_to_pd_converter.py 
 
 You can either start the application by using the run button in RStudio or navigating in the terminal to the directory of the files and then use the following command:
 
