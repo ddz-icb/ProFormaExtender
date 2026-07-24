@@ -23,14 +23,14 @@ Needed packages:
 
 # File Requirements:
 Ensure the following files are located in the same working directory:
-- RShiny_ui_v2.R   
+- RShiny_ui.R   
 - core_calculation.R   
 - mq_to_pd_converter.py 
 
 You can either start the application by using the run button in RStudio or navigating in the terminal to the directory of the files and then use the following command:
 
 # Run app:
-    shiny::runApp("RShiny_ui_v2.R")
+    shiny::runApp("RShiny_ui.R")
 
 Once the app is startet, the workflow is as follows: 
 
